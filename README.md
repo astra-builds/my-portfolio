@@ -1,3 +1,3 @@
 # My Portfolio
 
-Visit my portfolio website here: https://github.com/astra-builds/my-portfolio.git
+Visit my portfolio website here: (https://astra-builds.github.io/my-portfolio/#home)
