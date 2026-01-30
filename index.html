@@ -1,0 +1,161 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kamrul Hasan Ujjal — Personal Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">YourName</a>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Hi — I'm <span class="accent">Kamrul Hasan Ujjal</span>. A Data Science Undergraduate.</h1>
+          <p class="lead">Data analyst & aspiring AI engineer. I turn messy data into clear decisions — dashboards, scripts, and experiments.</p>
+          <div class="cta">
+            <a href="#portfolio" class="btn">View work</a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="card-inner">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=60" alt="portrait" />
+            <div class="card-stats">
+              <div><strong>Projects</strong><span>8+</span></div>
+              <div><strong>Skills</strong><span>SQL · Python · Power BI</span></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About me</h2>
+        <p class="section-lead">A short, honest summary of who you are and what you care about.</p>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>What I do</h3>
+            <p>Data analysis, dashboards, scraping, automation, and small ML experiments.</p>
+          </div>
+          <div class="about-card">
+            <h3>Tools</h3>
+            <p>Python · Pandas · SQL · Power BI · Git · Docker basics</p>
+          </div>
+          <div class="about-card">
+            <h3>Interests</h3>
+            <p>Agentic automation, reproducible pipelines, and clean visual design.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <p class="section-lead">Selected projects — brief, contextual, and linkable.</p>
+        <div class="grid">
+
+          <article class="project-card">
+            <img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?auto=format&fit=crop&w=800&q=60" alt="Project image">
+            <div class="project-body">
+              <h3>Dashboard: Sales Insights</h3>
+              <p>Power BI dashboard for sales trend analysis and KPI tracking.</p>
+              <a href="#" class="project-link">View case</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="https://images.unsplash.com/photo-1526378729328-4b4a5ecb0f0b?auto=format&fit=crop&w=800&q=60" alt="Project image">
+            <div class="project-body">
+              <h3>Web Scraper & ETL</h3>
+              <p>Python scraper + processing pipeline that outputs cleaned CSVs to cloud storage.</p>
+              <a href="#" class="project-link">View code</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=60" alt="Project image">
+            <div class="project-body">
+              <h3>Prototype: Recommendation Demo</h3>
+              <p>Small recommender built for a course project — explanation + reproducible notebook.</p>
+              <a href="#" class="project-link">Read more</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Let's work together</h2>
+          <p>Open to internships and freelance projects. I usually reply within a few days.</p>
+          <ul class="contact-list">
+            <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
+            <li>LinkedIn: <a href="#">linkedin.com/in/your</a></li>
+          </ul>
+        </div>
+
+        <form class="contact-form" action="#" onsubmit="alert('Form submitted (demo)'); return false;">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Your Name — Built with care.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', ()=> nav.classList.toggle('open'));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
